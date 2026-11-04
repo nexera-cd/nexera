@@ -1,0 +1,6 @@
+{
+  "name": "NEXERA — Écosystèmes Numériques & Ingénierie Logicielle",
+  "description": "NEXERA est une startup tech de premier plan basée à Kinshasa (RDC), concevant des écosystèmes logiciels sur mesure, applications mobiles haute performance et plateformes SaaS d'envergure mondiale.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
