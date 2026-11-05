@@ -252,16 +252,21 @@ export default function Footer({ lang, isDark }: FooterProps) {
               © {currentYear} NEXERA. {t.allRightsReserved}
             </span>
             <span className="hidden sm:inline text-gray-400">•</span>
-            {/* MANDATORY PROMINENT MENTION */}
-            <div
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-bold font-mono border ${
+            {/* MANDATORY PROMINENT MENTION WITH REDIRECTION LINK */}
+            <a
+              href="https://nexera-cd.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Site officiel de NEXERA"
+              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-bold font-mono text-xs border transition-all duration-300 hover:scale-105 group ${
                 isDark
-                  ? 'bg-[#00F076]/10 border-[#00F076]/30 text-[#00F076]'
-                  : 'bg-emerald-100 border-emerald-300 text-emerald-900'
+                  ? 'bg-[#00F076]/10 border-[#00F076]/30 text-[#00F076] hover:bg-[#00F076]/20'
+                  : 'bg-emerald-100 border-emerald-300 text-emerald-900 hover:bg-emerald-200/80 shadow-sm'
               }`}
             >
               <span>{t.realizedBy}</span>
-            </div>
+              <ExternalLink className="w-3 h-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           </div>
 
           <div
