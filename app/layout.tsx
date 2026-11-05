@@ -46,11 +46,36 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
+      {
         url: LOGO_URL,
+        sizes: '48x48',
+        type: 'image/jpeg',
+      },
+      {
+        url: LOGO_URL,
+        sizes: '96x96',
+        type: 'image/jpeg',
+      },
+      {
+        url: LOGO_URL,
+        sizes: '144x144',
+        type: 'image/jpeg',
+      },
+      {
+        url: LOGO_URL,
+        sizes: '192x192',
+        type: 'image/jpeg',
+      },
+      {
+        url: LOGO_URL,
+        sizes: '512x512',
         type: 'image/jpeg',
       },
     ],
-    shortcut: [LOGO_URL],
+    shortcut: ['/favicon.ico', LOGO_URL],
     apple: [
       {
         url: LOGO_URL,
@@ -157,10 +182,16 @@ export default function RootLayout({
   return (
     <html lang="fr" className="light scroll-smooth" suppressHydrationWarning>
       <head>
-        {/* Favicon fallback tags for standard browser & search crawlers */}
-        <link rel="icon" href={LOGO_URL} type="image/jpeg" />
-        <link rel="shortcut icon" href={LOGO_URL} />
-        <link rel="apple-touch-icon" href={LOGO_URL} />
+        {/* Google Search Favicon Guidelines (multiples of 48px square & /favicon.ico) */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/jpeg" sizes="48x48" href={LOGO_URL} />
+        <link rel="icon" type="image/jpeg" sizes="96x96" href={LOGO_URL} />
+        <link rel="icon" type="image/jpeg" sizes="144x144" href={LOGO_URL} />
+        <link rel="icon" type="image/jpeg" sizes="192x192" href={LOGO_URL} />
+        <link rel="icon" type="image/jpeg" sizes="512x512" href={LOGO_URL} />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href={LOGO_URL} />
+        <link rel="manifest" href="/manifest.webmanifest" />
 
         {/* WhatsApp & OpenGraph explicit image tags */}
         <meta property="og:image" content={LOGO_URL} />
